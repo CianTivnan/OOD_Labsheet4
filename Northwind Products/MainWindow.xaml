@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Northwind_Products"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -18,8 +18,8 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="lbxStock" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178"/>
-        <ListBox x:Name="lbxSuppliers" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376"/>
+        <ListBox x:Name="lbxStock" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" SelectionChanged="lbxStock_SelectionChanged"/>
+        <ListBox x:Name="lbxSuppliers" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierID"/>
         <ListBox x:Name="lbxCountries" Grid.Column="2" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178"/>
         <ListBox x:Name="lbxProducts" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="3"/>
         <Label Content="Stock Level" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" RenderTransformOrigin="0.17,0.634"/>
