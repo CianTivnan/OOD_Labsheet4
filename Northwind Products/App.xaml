@@ -1,0 +1,13 @@
+﻿<Application x:Class="Northwind_Products.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Northwind_Products"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Application.Resources>
+</Application>
