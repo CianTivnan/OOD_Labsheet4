@@ -24,5 +24,15 @@ namespace AdventureWorks_Customers
         {
             InitializeComponent();
         }
+
+        private void lbxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void lbxOrders_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
