@@ -19,8 +19,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <ListBox x:Name="lbxStock" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" SelectionChanged="lbxStock_SelectionChanged"/>
-        <ListBox x:Name="lbxSuppliers" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierID"/>
-        <ListBox x:Name="lbxCountries" Grid.Column="2" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178"/>
+        <ListBox x:Name="lbxSuppliers" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierID" SelectionChanged="lbxSuppliers_SelectionChanged"/>
+        <ListBox x:Name="lbxCountries" Grid.Column="2" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" SelectionChanged="lbxCountries_SelectionChanged"/>
         <ListBox x:Name="lbxProducts" HorizontalAlignment="Left" Height="137" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="3"/>
         <Label Content="Stock Level" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" RenderTransformOrigin="0.17,0.634"/>
         <Label Content="Suppliers" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center"/>

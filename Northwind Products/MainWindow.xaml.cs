@@ -61,6 +61,55 @@ namespace Northwind_Products
                         where p.UnitsInStock < 50
                         orderby p.ProductName
                         select p.ProductName;
+
+            string selected = lbxStock.SelectedItem as string;
+
+            switch(selected)
+            {
+                case "Low":
+                    //do nothing as query sorted from above
+                    break;
+                case "Normal":
+                    query = from p in db.Products
+                            where p.UnitsInStock >= 50 && p.UnitsInStock <= 100
+                            orderby p.ProductName
+                            select p.ProductName;
+                    break;
+                case "Overstocked":
+                    query = from p in db.Products
+                            where p.UnitsInStock > 100
+                            orderby p.ProductName
+                            select p.ProductName;
+                    break;
+            }
+
+            //update products list
+            lbxProducts.ItemsSource = query.ToList();
+        }
+
+        private void lbxSuppliers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //using selected value path
+            int supplierID = Convert.ToInt32(lbxSuppliers.SelectedValue);
+
+            var query = from p in db.Products
+                        where p.SupplierID == supplierID
+                        orderby p.ProductName
+                        select p.ProductName;
+
+            lbxProducts.ItemsSource = query.ToList();
+        }
+
+        private void lbxCountries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string country = (string)(lbxCountries.SelectedValue);
+
+            var query = from p in db.Products
+                        where p.Supplier.Country == country
+                        orderby p.ProductName
+                        select p.ProductName;
+
+            lbxProducts.ItemsSource = query.ToList();
         }
     }
 
